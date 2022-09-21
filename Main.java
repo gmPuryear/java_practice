@@ -47,13 +47,54 @@ public class Main {
         // - float: 32 bit can't use. Use an F at the end to make sure its a float. A 'smaller' container than a double
         // - double: 64 bit so a double is more precise than a float
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a string please");
-        String x = scanner.nextLine(); // gets a line a returns it
-        System.out.println(x);
-        System.out.println("Enter an int");
-        int y = scanner.nextInt();
-        System.out.println("You entered: " + y);
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter a string please");
+//        String x = scanner.nextLine(); // gets a line a returns it
+//        System.out.println(x);
+//        System.out.println("Enter an int");
+//        int y = scanner.nextInt();
+//        System.out.println("You entered: " + y);
+
+        // **Other datatypes that are classes**
+        // - Use 'scanner.nextBigDecimal" when you need to work with money as it is really precise also use as variable**
+        // - Multiple options when using scanner
+        // -INTEGER CLASS: has multiple static (available everywhere) methods
+        // - There is positive infinity and negative infinity
+
+//        System.out.println(Math.pow(-99999, 99999999)); // gives infinitiy when positive and -infinity when neg
+
+//        double high = 5;
+//        double low = 2;
+//        int x = 5 / 2;
+//        System.out.println(x);
+//        System.out.println("Two doubles used: " + high / low);
+
+        // Post increment and decrement
+//        int x = 5;
+//        x++;
+//        System.out.println(x);
+//        x--;
+//        System.out.println(x);
+
+        // Pre increment and decrement
+//        int x = 5;
+//        int y = 10;
+//        int a = x++; // a is getting assigned x, THEN it is incremented by 1
+//        System.out.println("x: " + x); // output 6
+//        System.out.println("a: " + a); // output 5
+//
+//        ++x;
+//        System.out.println(x); // output 7
+//        --x;
+//        System.out.println(x); // output 6
+//        x += 1; // is same as x = x + 1
+//        System.out.println(x);
+//        System.out.println(Integer.max(x, y)); // uses Integer class and max method to find which number is bigger
+//        System.out.println(Integer.compare(x, y)); // uses Integer class and compare. output here is -1 so x is smaller
+
+        String x = "hello";
+//        System.out.println(x.charAt(x.length() - 1)); // gets the character of x at last index of "hello"
+
 
 
 
