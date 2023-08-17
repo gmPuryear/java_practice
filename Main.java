@@ -23,10 +23,12 @@ public class Main {
 //        employee.sayHello(); // overiding person "sayHello" method
 
         // Using Super keyword in SuperHero class
-        SuperHero theManOfSteel = new SuperHero("Clark Kent", "Superman");
+//        SuperHero theManOfSteel = new SuperHero("Clark Kent", "Superman");
+//
+//        System.out.println(theManOfSteel.getName()); // "Superman"
+//        System.out.println(theManOfSteel.getSecretIdentity()); // "Clark Kent"
 
-        System.out.println(theManOfSteel.getName()); // "Superman"
-        System.out.println(theManOfSteel.getSecretIdentity()); // "Clark Kent"
+
 
 
     }
