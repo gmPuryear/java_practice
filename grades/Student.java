@@ -10,13 +10,15 @@ public class Student {
     public Student(String name) {
         this.name = name;
         grades = new ArrayList<>(); // each time a new Student is created, the name is set and a new grade list for the student is made
-
-
     }
 
     // returns the student's name
     public String getName(){
         return name;
+    }
+
+    public ArrayList getGrades() {
+        return grades;
     }
 
     // adds the given grade to the grades property
