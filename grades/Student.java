@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Student {
 
     private String name;
-    private ArrayList<Integer> grades; // Arraylists must be contain objects which is why this one has "Integer"
+    private ArrayList<Integer> grades; // Arraylists must contain objects which is why this one has "Integer"
 
     public Student(String name) {
         this.name = name;

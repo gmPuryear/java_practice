@@ -7,49 +7,55 @@ import java.util.Scanner;
 public class GradesApplication {
 
     public static void main(String[] args) {
-        HashMap<String, Student> students = new HashMap<String, Student>();
+        HashMap<String, Student> students = new HashMap<>();
+        addStudent.loadStockUsers(students);
+        addStudent.addStudent(students);
 
-        Student Sanders = new Student("Berry Sanders");
-        Sanders.addGrade(100);
-        Sanders.addGrade(65);
-        Sanders.addGrade(87);
+//        addStudent.addStudent(students);
 
-
-        Student Aaron = new Student("Hank Aaron");
-        Aaron.addGrade(85);
-        Aaron.addGrade(74);
-        Aaron.addGrade(69);
-
-
-        Student Williams = new Student("Hank Williams");
-        Williams.addGrade(90);
-        Williams.addGrade(91);
-        Williams.addGrade(82);
-
-        Student Fields = new Student("Sally Fields");
-        Fields.addGrade(99);
-        Fields.addGrade(91);
-        Fields.addGrade(94);
-
-        students.put("TheSandersMan".toLowerCase(Locale.ROOT), Sanders);
-        students.put("AaronTheGreat".toLowerCase(Locale.ROOT), Aaron);
-        students.put("SirWilliamsWill".toLowerCase(Locale.ROOT), Williams);
-        students.put("SallyOfFields".toLowerCase(Locale.ROOT),Fields);
-
-
-
-        for (String username : students.keySet()) {
-            System.out.println(username);
-        }
-        System.out.print("\nPlease enter a GitHub username to see more information: ");
+//        Student Sanders = new Student("Berry Sanders");
+//        Sanders.addGrade(100);
+//        Sanders.addGrade(65);
+//        Sanders.addGrade(87);
+//
+//
+//        Student Aaron = new Student("Hank Aaron");
+//        Aaron.addGrade(85);
+//        Aaron.addGrade(74);
+//        Aaron.addGrade(69);
+//
+//
+//        Student Williams = new Student("Hank Williams");
+//        Williams.addGrade(90);
+//        Williams.addGrade(91);
+//        Williams.addGrade(82);
+//
+//        Student Fields = new Student("Sally Fields");
+//        Fields.addGrade(99);
+//        Fields.addGrade(91);
+//        Fields.addGrade(94);
+//
+//        students.put("TheSandersMan".toLowerCase(), Sanders);
+//        students.put("AaronTheGreat".toLowerCase(), Aaron);
+//        students.put("SirWilliamsWill".toLowerCase(), Williams);
+//        students.put("SallyOfFields".toLowerCase(),Fields);
+//
+//        System.out.println(Fields.getGrades());
+//        for (String username : students.keySet()) {
+//            System.out.println(username);
+//        }
+//        System.out.print("\nPlease enter a GitHub username to see more information: ");
 //
 //        Scanner scanner = new Scanner(System.in);
-//        String usernameSelection = scanner.nextLine().toLowerCase();
-//
+//      String usernameSelection = scanner.nextLine().toLowerCase();
+//        System.out.println(usernameSelection);
+////
 //        System.out.println((students.containsKey(usernameSelection)));
 //
 //        if (students.containsKey(usernameSelection)) {
-//            Person user = usernameSelection.get;
+//            Student user = students.get(usernameSelection);
+//            System.out.println(user.getName());
+//            System.out.println(user.getGrades());
 //        }
 
 
