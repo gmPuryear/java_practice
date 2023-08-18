@@ -52,13 +52,19 @@ public class addStudent {
         System.out.print("Enter " + name + "'s " + "grade:");
         int grade = scanner.nextInt();
         student.addGrade(grade);
-        System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
-        String addAnotherGrade = scanner.nextLine();
-        while (addAnotherGrade != "y" || addAnotherGrade != "Y") {
-            addAnotherGrade = scanner.next();
-            student.addGrade(grade);
-            System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
+        System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N: ");
+        String addAnotherGrade = scanner.next();
+        System.out.println(addAnotherGrade);
+        if (addAnotherGrade.equalsIgnoreCase("y")) {
+            addGrade(scanner, name, student);
+//                System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
+//                addAnotherGrade = scanner.nextLine();
+//                grade = scanner.nextInt();
+//                student.addGrade(grade);
+//            System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
+        } else {
+            System.out.println(student.getName() + " " + student.getGrades());
         }
-        System.out.println(student.getName() + " " + student.getGrades());
+
     }
 }
