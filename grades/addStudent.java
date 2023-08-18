@@ -1,12 +1,18 @@
 package grades;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class addStudent {
 
-    public static void loadStockUsers(HashMap students) {
+    public addStudent(HashMap<String, Student> students) {
+        this.loadStockUsers(students);
+        this.addNewStudent(students);
+    }
+
+    public void loadStockUsers(HashMap students) {
         Student Sanders = new Student("Berry Sanders");
         Sanders.addGrade(100);
         Sanders.addGrade(65);
@@ -34,7 +40,7 @@ public class addStudent {
         students.put("SirWilliamsWill".toLowerCase(), Williams);
         students.put("SallyOfFields".toLowerCase(),Fields);
     }
-    public static void addStudent(HashMap students) {
+    public void addNewStudent(HashMap students) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please add a student: ");
         String name = scanner.nextLine();
@@ -42,11 +48,17 @@ public class addStudent {
         addGrade(scanner, name, student);
     }
 
-    public static void addGrade(Scanner scanner, String name, Student student) {
+    public void addGrade(Scanner scanner, String name, Student student) {
         System.out.print("Enter " + name + "'s " + "grade:");
         int grade = scanner.nextInt();
         student.addGrade(grade);
-        System.out.print("Would you like to add another grade for " + student.getName() + "?");
+        System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
+        String addAnotherGrade = scanner.nextLine();
+        while (addAnotherGrade != "y" || addAnotherGrade != "Y") {
+            addAnotherGrade = scanner.next();
+            student.addGrade(grade);
+            System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
+        }
         System.out.println(student.getName() + " " + student.getGrades());
     }
 }

@@ -8,8 +8,9 @@ public class GradesApplication {
 
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
-        addStudent.loadStockUsers(students);
-        addStudent.addStudent(students);
+        addStudent addStudent = new addStudent(students);
+//        addStudent.loadStockUsers(students);
+//        addStudent.addStudent(students);
 
 //        addStudent.addStudent(students);
 
