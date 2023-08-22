@@ -14,7 +14,7 @@ public class Student {
         this.name = name;
         this.userName = userName;
         grades = new ArrayList<>(); // each time a new Student is created, the name is set and a new grade list for the student is made
-        addUserName(userName, students);
+//        addUserName(userName, students);
     }
 
     // returns the student's name
@@ -43,9 +43,5 @@ public class Student {
         }
         double gradeAverage = (gradeTotal % grades.size()) + (gradeTotal / grades.size());
         return gradeAverage;
-    }
-
-    public void addUserName(String userName, HashMap students) {
-
     }
 }
