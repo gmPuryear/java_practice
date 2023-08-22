@@ -4,31 +4,31 @@ import java.util.HashMap;
 
 public class LoadStockUsers {
     public static void loadStockUsers(HashMap students) {
-//        Student Sanders = new Student("Berry Sanders");
-//        Sanders.addGrade(100);
-//        Sanders.addGrade(65);
-//        Sanders.addGrade(87);
-//
-//
-//        Student Aaron = new Student("Hank Aaron");
-//        Aaron.addGrade(85);
-//        Aaron.addGrade(74);
-//        Aaron.addGrade(69);
-//
-//
-//        Student Williams = new Student("Hank Williams");
-//        Williams.addGrade(90);
-//        Williams.addGrade(91);
-//        Williams.addGrade(82);
-//
-//        Student Fields = new Student("Sally Fields");
-//        Fields.addGrade(99);
-//        Fields.addGrade(91);
-//        Fields.addGrade(94);
-//
-//        students.put("TheSandersMan".toLowerCase(), Sanders);
-//        students.put("AaronTheGreat".toLowerCase(), Aaron);
-//        students.put("SirWilliamsWill".toLowerCase(), Williams);
-//        students.put("SallyOfFields".toLowerCase(),Fields);
+        Student Sanders = new Student("Berry Sanders", "SandersBerry", students);
+        Sanders.addGrade(100);
+        Sanders.addGrade(65);
+        Sanders.addGrade(87);
+
+
+        Student Aaron = new Student("Hank Aaron", "AaronHank", students);
+        Aaron.addGrade(85);
+        Aaron.addGrade(74);
+        Aaron.addGrade(69);
+
+
+        Student Williams = new Student("Hank Williams", "WilliamsHank", students);
+        Williams.addGrade(90);
+        Williams.addGrade(91);
+        Williams.addGrade(82);
+
+        Student Fields = new Student("Sally Fields", "FieldsSally", students);
+        Fields.addGrade(99);
+        Fields.addGrade(91);
+        Fields.addGrade(94);
+
+        students.put(Sanders.getUserName(), Sanders);
+        students.put(Aaron.getUserName().toLowerCase(), Aaron);
+        students.put(Williams.getUserName().toLowerCase(), Williams);
+        students.put(Fields.getUserName().toLowerCase(),Fields);
     }
 }

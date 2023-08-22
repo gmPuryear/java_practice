@@ -1,10 +1,11 @@
 package grades;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class ShowMenu {
 
-    public static void showMenu() {
+    public static void showMenu(HashMap students) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(
                 "1: Show all students: " +

@@ -9,7 +9,7 @@ public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
         LoadStockUsers.loadStockUsers(students);
-        ShowMenu.showMenu();
+        ShowMenu.showMenu(students);
 
 
 //        addStudent.loadStockUsers(students);
