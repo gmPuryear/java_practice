@@ -45,11 +45,14 @@ public class addStudent {
         System.out.print("Please add a student: ");
         String name = scanner.nextLine();
         Student student = new Student(name);
+        System.out.println("Please enter a username you would like to be associated with " + name + ": ");
+        String userName = scanner.nextLine();
+        students.put(userName);
         addGrade(scanner, name, student);
     }
 
     public void addGrade(Scanner scanner, String name, Student student) {
-        System.out.print("Enter " + name + "'s " + "grade:");
+        System.out.print("Enter " + name + "'s " + "grade: ");
         int grade = scanner.nextInt();
         student.addGrade(grade);
         System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N: ");
@@ -57,14 +60,13 @@ public class addStudent {
         System.out.println(addAnotherGrade);
         if (addAnotherGrade.equalsIgnoreCase("y")) {
             addGrade(scanner, name, student);
-//                System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
-//                addAnotherGrade = scanner.nextLine();
-//                grade = scanner.nextInt();
-//                student.addGrade(grade);
-//            System.out.print("Would you like to add another grade for " + student.getName() + "? Y/N");
         } else {
-            System.out.println(student.getName() + " " + student.getGrades());
+            System.out.println("Would you like to see " + name + "'s grades and average? ");
+            String seeGrades = scanner.next();
+            if (seeGrades.equalsIgnoreCase("y")) {
+                System.out.println(student.getName() + "\nGrades: " +
+                        student.getGrades() + "\nGrade Average: " + Math.round(student.getGradeAverage()));
+            }
         }
-
     }
 }
