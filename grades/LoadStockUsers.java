@@ -3,6 +3,7 @@ package grades;
 import java.util.HashMap;
 
 public class LoadStockUsers {
+//    Just used to populate the hashmap with some random users
     public static void loadStockUsers(HashMap students) {
         Student Sanders = new Student("Berry Sanders", "SandersBerry", students);
         Sanders.addGrade(100);
