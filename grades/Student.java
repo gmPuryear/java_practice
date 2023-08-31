@@ -13,8 +13,8 @@ public class Student {
     public Student(String name, String userName, HashMap students) {
         this.name = name;
         this.userName = userName;
-        grades = new ArrayList<>(); // each time a new Student is created, the name is set and a new grade list for the student is made
-//        addUserName(userName, students);
+        // each time a new Student is created, the name is set and a new grade list for the student is made
+        grades = new ArrayList<>();
     }
 
     // returns the student's name
@@ -30,18 +30,18 @@ public class Student {
         return grades;
     }
 
-    // adds the given grade to the grades property
+    // adds the given grade to the grades array list
     public void addGrade(int grade) {
         grades.add(grade);
     }
 
-//  // returns the average of the students grades
+//  returns the rounded average of the students grades
     public double getGradeAverage() {
         double gradeTotal = 0;
         for (int grade : grades) {
             gradeTotal += grade;
         }
-        double gradeAverage = (gradeTotal % grades.size()) + (gradeTotal / grades.size());
+        double gradeAverage = Math.round((gradeTotal / grades.size()));
         return gradeAverage;
     }
 }
