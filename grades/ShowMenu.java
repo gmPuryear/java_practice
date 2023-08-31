@@ -21,8 +21,21 @@ public class ShowMenu {
         System.out.println(selection);
         DecimalFormat df = new DecimalFormat("###.##");
         Set<Map.Entry<String, Student>> entries = students.entrySet();
-        if (selection == 1) {
-            for (Map.Entry<String, Student> stud : entries) { // looping over hashmap
+//        if (selection == 1) {
+//            for (Map.Entry<String, Student> stud : entries) { // looping over hashmap
+//                Student studentInfo = stud.getValue();
+//                System.out.println(
+//                        "Name: " +  studentInfo.getName() +
+//                        "\nUsername: " +  studentInfo.getUserName() +
+//                        "\nGrades: " + studentInfo.getGrades() +
+//                        "\nAverage: " + Math.round(studentInfo.getGradeAverage()) +
+//                        "\n------------------------------------------");
+//            }
+//        }
+
+        switch (selection) {
+            case 1:
+                for (Map.Entry<String, Student> stud : entries) { // looping over hashmap
                 Student studentInfo = stud.getValue();
                 System.out.println(
                         "Name: " +  studentInfo.getName() +
@@ -30,9 +43,17 @@ public class ShowMenu {
                         "\nGrades: " + studentInfo.getGrades() +
                         "\nAverage: " + Math.round(studentInfo.getGradeAverage()) +
                         "\n------------------------------------------");
-
-//                System.out.println(stud.getKey() + " " + "Username: " + stud.getValue().getUserName() + " " + stud.getValue().getGrades());
             }
+            case 2:
+                System.out.println("Please enter students first and last name (e.g.\"Jane Doe\"): ");
+                String studentName = scanner.next();
+                String splitStudentName[] = (studentName.split(" "));
+                if (splitStudentName.length != 2) {
+                    System.out.println("Please enter a valid student name: ");
+
+                }
+
+
         }
 
 
