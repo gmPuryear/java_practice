@@ -24,7 +24,7 @@ public class UserSelection {
             case 1:
                 ShowAllStudents.showAllStudents(students, entries);
             case 2:
-                FindStudent.findStudent(students);
+                FindStudent.findStudent(entries);
         }
     }
 

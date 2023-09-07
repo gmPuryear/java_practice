@@ -2,21 +2,40 @@ package grades.choices;
 
 import grades.Student;
 
-import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 import static grades.GradesApplication.scanner;
 
 public class FindStudent {
 
-    public static void findStudent(HashMap<String, Student> students) {
+    public static void findStudent(Set<Map.Entry<String, Student>> entries) {
         System.out.println("Please enter students first and last name (e.g.\"Jane Doe\"): ");
         String studentName = scanner.nextLine();
-//        checkNameIsTwoWords(studentName);
-//        checkNameForNums(studentName);
         if (checkNameIsTwoWords(studentName) && checkNameForNums(studentName)) {
-            System.out.println("Name is good!");
+            searchDatabaseForStudent(studentName, entries);
         } else {
-            System.out.println("name is bad!");
+            System.out.println("Invalid entry");
+            findStudent(entries);
+        }
+    }
+
+    private static void searchDatabaseForStudent(String studentName, Set<Map.Entry<String, Student>> entries) {
+        for (Map.Entry<String, Student> stud : entries) { // looping over hashmap
+            Student studentInfo = stud.getValue();
+            if (studentInfo.getName().equalsIgnoreCase(studentName)) {
+                System.out.println(
+                        "Name: " +  studentInfo.getName() +
+                                "\nUsername: " +  studentInfo.getUserName() +
+                                "\nGrades: " + studentInfo.getGrades() +
+                                "\nAverage: " + Math.round(studentInfo.getGradeAverage()) +
+                                "\n------------------------------------------");
+            } else {
+                System.out.println("Student not found" +
+                        "\nGo back to menu?" +
+                        "\nSearch again" +
+                        "\nExit");
+            }
         }
     }
 
@@ -29,19 +48,6 @@ public class FindStudent {
         }
     }
 
-//    public static boolean checkNameForNums(String studentName) {
-//        char[] splitStudentCharArr = studentName.toCharArray();
-//        boolean nameHasNoNums = true;
-//        while (nameHasNoNums)
-//            for (int i = 0; i < splitStudentCharArr.length; i++) {
-//                if (Character.isDigit(splitStudentCharArr[i])) {
-//                    nameHasNoNums = false;
-//                    break;
-//                }
-//            }
-//        return nameHasNoNums;
-//    }
-
     public static boolean checkNameForNums(String studentName) {
         char[] splitStudentCharArr = studentName.toCharArray();
         for (int i = 0; i < splitStudentCharArr.length; i++) {
@@ -51,9 +57,6 @@ public class FindStudent {
         }
         return true;
     }
-
-
-
 
 
 
