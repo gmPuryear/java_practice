@@ -9,9 +9,10 @@ public class GradesApplication {
         HashMap<String, Student> students = new HashMap<>();
         LoadStockUsers.loadStockUsers(students);
         System.out.println(students.entrySet());
-        map
+        // This will print out the keys and values. However, you will still need to use the get methods for each student value.
+//        students.forEach((key, value) -> System.out.println(key + ":" + value.getGrades()));
 //        Set<Map.Entry<String, Student>> entries = students.entrySet(); //The method returns a set having same elements as the hash map (keys and values)
-//        UserSelection.userSelection(entries);
+        UserSelection.userSelection(students);
 
 
 //        addStudent.loadStockUsers(students);

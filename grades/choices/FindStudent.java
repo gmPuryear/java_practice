@@ -2,6 +2,7 @@ package grades.choices;
 
 import grades.Student;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -13,28 +14,32 @@ public class FindStudent {
         System.out.println("Please enter student's first and last name (e.g.\"Jane Doe\"): ");
         String studentName = scanner.nextLine();
         if (checkNameIsTwoWords(studentName) && checkNameForNums(studentName)) {
-            searchDatabaseForStudent(studentName, entries);
+            searchDatabaseForStudent(studentName, st);
         } else {
             System.out.println("Invalid entry");
             findStudent(entries);
         }
     }
 
-    private static void searchDatabaseForStudent(String studentName, Set<Map.Entry<String, Student>> entries) {
-        for (Map.Entry<String, Student> stud : entries) { // looping over hashmap
-            Student studentInfo = stud.getValue();
-            if (studentInfo.getName().equalsIgnoreCase(studentName)) {
-                System.out.println(
-                        "Name: " +  studentInfo.getName() +
-                                "\nUsername: " +  studentInfo.getUserName() +
-                                "\nGrades: " + studentInfo.getGrades() +
-                                "\nGrade Average: " + Math.round(studentInfo.getGradeAverage()) +
-                                "\n------------------------------------------");
-                ExitProgram.exitProgram(entries);
-            } else {
-                continue;
-            }
-        }
+    private static void searchDatabaseForStudent(String studentName, HashMap <String, Student> students) {
+
+        students.forEach ((key, value) ->
+
+
+//        Map.Entry<String, Student> stud : students) { // looping over hashmap
+//            Student studentInfo = stud.getValue();
+//            if (studentInfo.getName().equalsIgnoreCase(studentName)) {
+//                System.out.println(
+//                        "Name: " +  studentInfo.getName() +
+//                                "\nUsername: " +  studentInfo.getUserName() +
+//                                "\nGrades: " + studentInfo.getGrades() +
+//                                "\nGrade Average: " + Math.round(studentInfo.getGradeAverage()) +
+//                                "\n------------------------------------------");
+//                ExitProgram.exitProgram(students);
+//            } else {
+//                continue;
+//            }
+//        }
     }
 
     public static boolean checkNameIsTwoWords(String studentName) {
