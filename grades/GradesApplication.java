@@ -1,8 +1,6 @@
 package grades;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class GradesApplication {
 
@@ -10,7 +8,10 @@ public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
         LoadStockUsers.loadStockUsers(students);
-        UserSelection.userSelection(students);
+        System.out.println(students.entrySet());
+        map
+//        Set<Map.Entry<String, Student>> entries = students.entrySet(); //The method returns a set having same elements as the hash map (keys and values)
+//        UserSelection.userSelection(entries);
 
 
 //        addStudent.loadStockUsers(students);

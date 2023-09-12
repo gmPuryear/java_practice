@@ -1,7 +1,9 @@
 package grades;
 
+import java.util.HashMap;
+
 public class AddStudent {
-    public static void add() {
+    public static void addStudent(HashMap<String, Student> students) {
 
     }
 

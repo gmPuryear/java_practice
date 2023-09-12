@@ -10,7 +10,7 @@ import static grades.GradesApplication.scanner;
 public class FindStudent {
 
     public static void findStudent(Set<Map.Entry<String, Student>> entries) {
-        System.out.println("Please enter students first and last name (e.g.\"Jane Doe\"): ");
+        System.out.println("Please enter student's first and last name (e.g.\"Jane Doe\"): ");
         String studentName = scanner.nextLine();
         if (checkNameIsTwoWords(studentName) && checkNameForNums(studentName)) {
             searchDatabaseForStudent(studentName, entries);
@@ -28,13 +28,11 @@ public class FindStudent {
                         "Name: " +  studentInfo.getName() +
                                 "\nUsername: " +  studentInfo.getUserName() +
                                 "\nGrades: " + studentInfo.getGrades() +
-                                "\nAverage: " + Math.round(studentInfo.getGradeAverage()) +
+                                "\nGrade Average: " + Math.round(studentInfo.getGradeAverage()) +
                                 "\n------------------------------------------");
+                ExitProgram.exitProgram(entries);
             } else {
-                System.out.println("Student not found" +
-                        "\nGo back to menu?" +
-                        "\nSearch again" +
-                        "\nExit");
+                continue;
             }
         }
     }
