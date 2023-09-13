@@ -27,9 +27,9 @@ public class LoadStockUsers {
         Fields.addGrade(91);
         Fields.addGrade(94);
 
-        students.put(Sanders.getUserName(), Sanders);
-        students.put(Aaron.getUserName().toLowerCase(), Aaron);
-        students.put(Williams.getUserName().toLowerCase(), Williams);
-        students.put(Fields.getUserName().toLowerCase(),Fields);
+        students.put(Sanders.getName(), Sanders);
+        students.put(Aaron.getName().toLowerCase(), Aaron);
+        students.put(Williams.getName().toLowerCase(), Williams);
+        students.put(Fields.getName().toLowerCase(),Fields);
     }
 }

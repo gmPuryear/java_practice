@@ -17,6 +17,6 @@ public class ShowAllStudents {
                             "\nAverage: " + Math.round(value.getGradeAverage()) +
                             "\n------------------------------------------"
             ));
-//        ExitProgram.exitProgram(students);
+        ExitProgram.exitProgram(students);
     }
 }

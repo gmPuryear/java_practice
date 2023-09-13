@@ -21,11 +21,11 @@ public class UserSelection {
             case 1:
                 ShowAllStudents.showAllStudents(students);
             case 2:
-//                FindStudent.findStudent(students);
+                FindStudent.findStudent(students);
             case 3:
-//                AddStudent.addStudent(students);
+                AddStudent.addStudent(students);
             case 4:
-                System.out.print("Good bye!");
+                System.out.print("Good bye from switch statement!");
                 System.exit(0);
         }
     }
