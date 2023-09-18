@@ -25,7 +25,6 @@ public class UserSelection {
             case 3:
                 AddStudent.addStudent(students);
             case 4:
-                System.out.print("Good bye from switch statement!");
                 System.exit(0);
         }
     }

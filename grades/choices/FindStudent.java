@@ -55,22 +55,4 @@ public class FindStudent {
             }
         });
     }
-
-
-//        Map.Entry<String, Student> stud : students) { // looping over hashmap
-//            Student studentInfo = stud.getValue();
-//            if (studentInfo.getName().equalsIgnoreCase(studentName)) {
-//                System.out.println(
-//                        "Name: " +  studentInfo.getName() +
-//                                "\nUsername: " +  studentInfo.getUserName() +
-//                                "\nGrades: " + studentInfo.getGrades() +
-//                                "\nGrade Average: " + Math.round(studentInfo.getGradeAverage()) +
-//                                "\n------------------------------------------");
-//                ExitProgram.exitProgram(students);
-//            } else {
-//                continue;
-//            }
-//        }
-
-
 }
