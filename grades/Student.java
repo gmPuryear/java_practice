@@ -10,7 +10,7 @@ public class Student {
     private String userName;
     private ArrayList<Integer> grades; // Arraylists must contain objects which is why this one has "Integer"
 
-    public Student(String name, String userName, HashMap students) {
+    public Student(String name, String userName) {
         this.name = name;
         this.userName = userName;
         // each time a new Student is created, the name is set and a new grade list for the student is made

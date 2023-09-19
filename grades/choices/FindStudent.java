@@ -42,7 +42,7 @@ public class FindStudent {
 
 
 
-    private static void searchDatabaseForStudent(String studentName, HashMap <String, Student> students) {
+    private static void searchDatabaseForStudent() {
         students.forEach((name, studentInfo) -> {
             if (name.equalsIgnoreCase(studentName)) {
                 System.out.println(
@@ -51,7 +51,7 @@ public class FindStudent {
                                 "\nGrades: " + studentInfo.getGrades() +
                                 "\nGrade Average: " + Math.round(studentInfo.getGradeAverage()) +
                                 "\n------------------------------------------");
-                ExitProgram.exitProgram(students);
+                ExitProgram.exitProgram();
             }
         });
     }

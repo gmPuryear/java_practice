@@ -12,8 +12,11 @@ import static grades.GradesApplication.scanner;
 
 public class UserSelection {
 
-    static public void userSelection (HashMap <String, Student> students) {
+    static public void userSelection () {
         FileHelper.writeToFile();
+
+        HashMap <String, Student> students = new HashMap<>();
+
         System.out.println(UserMenu.userMenu());
         System.out.println("Please enter your selection: ");
         int selection = scanner.nextInt();

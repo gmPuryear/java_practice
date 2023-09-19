@@ -15,7 +15,7 @@ public class AddStudent {
         System.out.println("Username: ");
         String studentUsername = scanner.nextLine();
         System.out.println(studentUsername);
-        Student newStudent = new Student(studentName, studentUsername, students);
+        Student newStudent = new Student(studentName, studentUsername);
         addNewStudentsGrade(newStudent, students, studentName);
     }
 
@@ -36,7 +36,7 @@ public class AddStudent {
             scanner.nextLine();
                 String goBackToMenu = scanner.nextLine();
                 if (goBackToMenu.equalsIgnoreCase("y")) {
-                    UserSelection.userSelection(students);
+                    UserSelection.userSelection();
                 } else {
                     System.exit(0);
                 }
