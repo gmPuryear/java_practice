@@ -3,6 +3,7 @@ package grades;
 import grades.choices.FindStudent;
 import grades.choices.ShowAllStudents;
 
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -12,6 +13,7 @@ import static grades.GradesApplication.scanner;
 public class UserSelection {
 
     static public void userSelection (HashMap <String, Student> students) {
+        FileHelper.writeToFile();
         System.out.println(UserMenu.userMenu());
         System.out.println("Please enter your selection: ");
         int selection = scanner.nextInt();
